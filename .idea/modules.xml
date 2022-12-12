@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/biking-bank/account.cmd/account.cmd.iml" filepath="$PROJECT_DIR$/biking-bank/account.cmd/account.cmd.iml" />
+      <module fileurl="file://$PROJECT_DIR$/biking-bank/account.common/account.common.iml" filepath="$PROJECT_DIR$/biking-bank/account.common/account.common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/biking-bank/account.query/account.query.iml" filepath="$PROJECT_DIR$/biking-bank/account.query/account.query.iml" />
+      <module fileurl="file://$PROJECT_DIR$/biking-bank/biking-bank.iml" filepath="$PROJECT_DIR$/biking-bank/biking-bank.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cqrs/cqrs.core/cqrs.core.iml" filepath="$PROJECT_DIR$/cqrs/cqrs.core/cqrs.core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/microservices-patterns.iml" filepath="$PROJECT_DIR$/.idea/microservices-patterns.iml" />
+    </modules>
+  </component>
+</project>
