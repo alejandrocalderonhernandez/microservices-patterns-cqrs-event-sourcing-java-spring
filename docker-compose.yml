@@ -24,6 +24,7 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: event-master
       MONGO_INITDB_ROOT_PASSWORD: debuggeandoideas
+      MONGO_INITDB_DATABASE: events
     volumes:
       - ~/Documents/docker-vol/microservices-patterns-postgres:/data/db
       - ~/Documents/docker-vol/microservices-patterns-postgres:/var/log/mongodb/
