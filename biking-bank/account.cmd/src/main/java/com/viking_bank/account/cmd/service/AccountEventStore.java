@@ -10,14 +10,13 @@ import com.viking_bank.cqrs.core.util.IllegalEventVersionException;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
-import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
 @Service
 public class AccountEventStore implements EventStoreService {
-
     private final EventStoreRepository eventStoreRepository;
 
     public AccountEventStore(EventStoreRepository eventStoreRepository) {
@@ -56,7 +55,7 @@ public class AccountEventStore implements EventStoreService {
     }
 
     @Override
-    public List<BaseEvent> findEventsByAggregateId(String aggregateId) {
+    public Set<BaseEvent> findEventsByAggregateId(String aggregateId) {
         var eventsResponse = eventStoreRepository.findByAggregateIdentified(aggregateId);
 
         if (eventsResponse.isEmpty())
@@ -65,6 +64,6 @@ public class AccountEventStore implements EventStoreService {
         return eventsResponse
                 .stream()
                 .map(EventModel::getEventData)
-                .collect(Collectors.toUnmodifiableList());
+                .collect(Collectors.toUnmodifiableSet());
     }
 }

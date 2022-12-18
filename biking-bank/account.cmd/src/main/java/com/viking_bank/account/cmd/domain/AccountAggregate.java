@@ -6,12 +6,14 @@ import com.viking_bank.account.common.events.AccountOpenedEvent;
 import com.viking_bank.account.common.events.FoundDepositedEvent;
 import com.viking_bank.account.common.events.FoundsWithdrawnEvent;
 import com.viking_bank.cqrs.core.domain.AggregateRoot;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
 public class AccountAggregate extends AggregateRoot {
 
     private boolean active;
+    @Getter
     private Double balance;
 
     /**

@@ -7,9 +7,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.*;
 
-/**
- * This interface represents "concrete Mediator" in design patter mediator
- */
 @Service
 public class AccountCommandDispatcher implements CommandDispatcher {
 
@@ -25,7 +22,6 @@ public class AccountCommandDispatcher implements CommandDispatcher {
     /**
      * @param type represents a command to handle class type
      * @param handler is the implementation concrete of the command  a through anonymous
-     * handler represent "concrete Colleague" in mediator design pattern
      *  Add  in routes a new command
      */
     @Override
