@@ -6,7 +6,9 @@ import com.viking_bank.account.cmd.domain.EventStoreRepository;
 import com.viking_bank.cqrs.core.events.BaseEvent;
 import com.viking_bank.cqrs.core.events.EventModel;
 import com.viking_bank.cqrs.core.infrastructure.EventStoreService;
+import com.viking_bank.cqrs.core.producers.EventProducer;
 import com.viking_bank.cqrs.core.util.IllegalEventVersionException;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
@@ -16,11 +18,14 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
 @Service
+@Slf4j
 public class AccountEventStore implements EventStoreService {
     private final EventStoreRepository eventStoreRepository;
+    private final EventProducer eventProducer;
 
-    public AccountEventStore(EventStoreRepository eventStoreRepository) {
+    public AccountEventStore(EventStoreRepository eventStoreRepository, EventProducer eventProducer) {
         this.eventStoreRepository = eventStoreRepository;
+        this.eventProducer = eventProducer;
     }
 
     @Override
@@ -48,10 +53,12 @@ public class AccountEventStore implements EventStoreService {
                     .build();
 
             var persistedEvent = this.eventStoreRepository.save(eventModel);
-            // TO DO implement kafka
+            if (Objects.nonNull(persistedEvent.getId())) {
+                this.eventProducer.produce(e.getClass().getSimpleName(), e);
+            } else {
+                log.error("Error on save event");
+            }
         });
-
-
     }
 
     @Override
