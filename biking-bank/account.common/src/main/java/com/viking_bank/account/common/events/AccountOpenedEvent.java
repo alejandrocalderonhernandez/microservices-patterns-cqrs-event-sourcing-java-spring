@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
@@ -19,6 +20,6 @@ public class AccountOpenedEvent extends BaseEvent {
 
     private String accountHolder;
     private AccountType accountType;
-    private LocalDate currentDate;
+    private LocalDateTime currentDate;
     private Double openingBalance;
 }

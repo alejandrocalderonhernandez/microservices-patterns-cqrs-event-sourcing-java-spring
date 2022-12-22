@@ -2,6 +2,7 @@ package com.viking_bank.account.query.domain;
 
 import com.viking_bank.account.common.dto.AccountType;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -13,6 +14,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@Builder
 public class BankAccount {
     @Id
     private String id;
