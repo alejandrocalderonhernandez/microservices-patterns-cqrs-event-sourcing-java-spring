@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 
 @Data
 @Builder
-@Document(collation = "event_Store")
+@Document(collection = "event_model")
 public class EventModel {
 
     @Id

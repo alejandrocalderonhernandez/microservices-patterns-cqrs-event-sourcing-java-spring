@@ -4,10 +4,13 @@ import com.viking_bank.account.common.events.AccountClosedEvent;
 import com.viking_bank.account.common.events.AccountOpenedEvent;
 import com.viking_bank.account.common.events.FoundDepositedEvent;
 import com.viking_bank.account.common.events.FoundsWithdrawnEvent;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.support.Acknowledgment;
+import org.springframework.stereotype.Component;
 
-
+@Component
+@Slf4j
 public class AccountEventConsumer implements EventConsumer {
     private final AccountService accountService;
 
@@ -18,6 +21,7 @@ public class AccountEventConsumer implements EventConsumer {
     @Override
     @KafkaListener(topics = "AccountOpenedEvent", groupId = "${spring.kafka.consumer.group-id}")
     public void consume(AccountOpenedEvent event, Acknowledgment ack) {
+        log.info("receiving data from kafka topic: AccountOpenedEvent, data: {}", event);
         this.accountService.on(event);
         ack.acknowledge();
     }
@@ -25,6 +29,7 @@ public class AccountEventConsumer implements EventConsumer {
     @Override
     @KafkaListener(topics = "FoundDepositedEvent", groupId = "${spring.kafka.consumer.group-id}")
     public void consume(FoundDepositedEvent event, Acknowledgment ack) {
+        log.info("receiving data from kafka topic: FoundDepositedEvent, data: {}", event);
         this.accountService.on(event);
         ack.acknowledge();
     }
@@ -32,6 +37,7 @@ public class AccountEventConsumer implements EventConsumer {
     @Override
     @KafkaListener(topics = "FoundsWithdrawnEvent", groupId = "${spring.kafka.consumer.group-id}")
     public void consume(FoundsWithdrawnEvent event, Acknowledgment ack) {
+        log.info("receiving data from kafka topic: FoundsWithdrawnEvent, data: {}", event);
         this.accountService.on(event);
         ack.acknowledge();
     }
@@ -39,6 +45,7 @@ public class AccountEventConsumer implements EventConsumer {
     @Override
     @KafkaListener(topics = "AccountClosedEvent", groupId = "${spring.kafka.consumer.group-id}")
     public void consume(AccountClosedEvent event, Acknowledgment ack) {
+        log.info("receiving data from kafka topic: AccountClosedEvent, data: {}", event);
         this.accountService.on(event);
         ack.acknowledge();
     }

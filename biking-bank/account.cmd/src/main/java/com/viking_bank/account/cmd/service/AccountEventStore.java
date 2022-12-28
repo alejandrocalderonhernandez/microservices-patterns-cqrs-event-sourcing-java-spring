@@ -32,9 +32,6 @@ public class AccountEventStore implements EventStoreService {
     public void save(String aggregateId, Collection<BaseEvent> newEvents, Integer newVersion) {
         var eventsResponse = this.eventStoreRepository.findByAggregateIdentified(aggregateId);
 
-        if (eventsResponse.isEmpty())
-                throw new IllegalArgumentException("Not exist records with aggregateId" + aggregateId);
-
         if (newVersion != -1 && !Objects.equals(Iterables.getLast(eventsResponse).getVersion(), newVersion))
             throw new IllegalEventVersionException(newVersion);
 

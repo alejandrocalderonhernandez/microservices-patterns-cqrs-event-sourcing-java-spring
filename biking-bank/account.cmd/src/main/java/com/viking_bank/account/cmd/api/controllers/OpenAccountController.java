@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(path = "/biking/api/open-account")
+@RequestMapping(path = "biking/api/open-account")
 public class OpenAccountController {
     private final CommandDispatcher commandDispatcher;
 

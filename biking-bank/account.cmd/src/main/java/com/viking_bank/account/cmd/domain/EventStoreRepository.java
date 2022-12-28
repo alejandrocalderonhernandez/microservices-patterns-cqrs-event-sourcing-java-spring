@@ -3,9 +3,9 @@ package com.viking_bank.account.cmd.domain;
 import com.viking_bank.cqrs.core.events.EventModel;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
-import java.util.List;
+import java.util.HashSet;
 
 public interface EventStoreRepository extends MongoRepository<EventModel, String> {
 
-    List<EventModel> findByAggregateIdentified(String aggregateIdentified);
+    HashSet<EventModel> findByAggregateIdentified(String aggregateIdentified);
 }

@@ -20,14 +20,13 @@ public class AccountAggregate extends AggregateRoot {
      * @param command received by te client to build event to execute
      */
     public AccountAggregate(OpenAccountCommand command) {
-        var event = AccountOpenedEvent
+        raiseEvent(AccountOpenedEvent
                     .builder()
                     .id(command.getId())
                     .accountHolder(command.getAccountHolder())
                     .accountType(command.getAccountType())
                     .openingBalance(command.getOpeningBalance())
-                    .build();
-
+                    .build());
     }
 
     /**
