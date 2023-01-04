@@ -1,4 +1,4 @@
-package com.viking_bank.account.cmd.infraestructure;
+package com.viking_bank.account.cmd.infraestructure.services;
 
 import com.viking_bank.cqrs.core.events.BaseEvent;
 import com.viking_bank.cqrs.core.producers.EventProducer;
@@ -9,11 +9,11 @@ import org.springframework.stereotype.Service;
 
 @Service
 @Slf4j
-public class AccountEventProducer implements EventProducer{
+public class AccountEventProducerService implements EventProducer{
 
     private final KafkaTemplate<String, Object> kafkaTemplate;
 
-    public AccountEventProducer(KafkaTemplate<String, Object> kafkaTemplate) {
+    public AccountEventProducerService(KafkaTemplate<String, Object> kafkaTemplate) {
         this.kafkaTemplate = kafkaTemplate;
     }
 

@@ -1,6 +1,6 @@
 package com.viking_bank.account.cmd.api.command;
 
-import com.viking_bank.account.cmd.domain.AccountAggregate;
+import com.viking_bank.account.cmd.domain.models.AccountAggregate;
 import com.viking_bank.cqrs.core.handlers.EventSourcingHandler;
 import org.springframework.stereotype.Service;
 

@@ -1,8 +1,8 @@
-package com.viking_bank.account.cmd.service;
+package com.viking_bank.account.cmd.infraestructure.services;
 
 import com.google.common.collect.Iterables;
-import com.viking_bank.account.cmd.domain.AccountAggregate;
-import com.viking_bank.account.cmd.domain.EventStoreRepository;
+import com.viking_bank.account.cmd.domain.models.AccountAggregate;
+import com.viking_bank.account.cmd.domain.repositories.EventStoreRepository;
 import com.viking_bank.cqrs.core.events.BaseEvent;
 import com.viking_bank.cqrs.core.events.EventModel;
 import com.viking_bank.cqrs.core.infrastructure.EventStoreService;

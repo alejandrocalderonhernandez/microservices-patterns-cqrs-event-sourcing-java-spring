@@ -1,4 +1,4 @@
-package com.viking_bank.account.cmd.infraestructure;
+package com.viking_bank.account.cmd.infraestructure.dispatchers;
 
 import com.viking_bank.cqrs.core.comands.BaseCommand;
 import com.viking_bank.cqrs.core.comands.CommandHandlerMethod;
@@ -35,9 +35,10 @@ public class AccountCommandDispatcher implements CommandDispatcher {
      */
     @Override
     public void send(BaseCommand command) {
-        var handlers = routes.get(command.getClass());
+        var handlersOptional = Optional.of(routes.get(command.getClass()));
 
-        if (Objects.isNull(handlers) || handlers.isEmpty()) throw new RuntimeException("The command are not registered");
+        var handlers =  handlersOptional.orElseThrow(() -> new RuntimeException("The command are not registered"));
+
         if (handlers.size() > 1) throw new RuntimeException("The command just must have one handler");
 
         handlers.get(0).handle(command);

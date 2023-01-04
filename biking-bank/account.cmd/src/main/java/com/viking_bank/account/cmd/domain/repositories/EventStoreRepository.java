@@ -1,4 +1,4 @@
-package com.viking_bank.account.cmd.domain;
+package com.viking_bank.account.cmd.domain.repositories;
 
 import com.viking_bank.cqrs.core.events.EventModel;
 import org.springframework.data.mongodb.repository.MongoRepository;

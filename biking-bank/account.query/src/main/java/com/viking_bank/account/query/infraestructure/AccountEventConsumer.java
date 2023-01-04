@@ -22,31 +22,31 @@ public class AccountEventConsumer implements EventConsumer {
     @KafkaListener(topics = "AccountOpenedEvent", groupId = "${spring.kafka.consumer.group-id}")
     public void consume(AccountOpenedEvent event, Acknowledgment ack) {
         log.info("receiving data from kafka topic: AccountOpenedEvent, data: {}", event);
-        this.accountService.on(event);
         ack.acknowledge();
+        this.accountService.on(event);
     }
 
     @Override
     @KafkaListener(topics = "FoundDepositedEvent", groupId = "${spring.kafka.consumer.group-id}")
     public void consume(FoundDepositedEvent event, Acknowledgment ack) {
         log.info("receiving data from kafka topic: FoundDepositedEvent, data: {}", event);
-        this.accountService.on(event);
         ack.acknowledge();
+        this.accountService.on(event);
     }
 
     @Override
     @KafkaListener(topics = "FoundsWithdrawnEvent", groupId = "${spring.kafka.consumer.group-id}")
     public void consume(FoundsWithdrawnEvent event, Acknowledgment ack) {
         log.info("receiving data from kafka topic: FoundsWithdrawnEvent, data: {}", event);
-        this.accountService.on(event);
         ack.acknowledge();
+        this.accountService.on(event);
     }
 
     @Override
     @KafkaListener(topics = "AccountClosedEvent", groupId = "${spring.kafka.consumer.group-id}")
     public void consume(AccountClosedEvent event, Acknowledgment ack) {
         log.info("receiving data from kafka topic: AccountClosedEvent, data: {}", event);
-        this.accountService.on(event);
         ack.acknowledge();
+        this.accountService.on(event);
     }
 }

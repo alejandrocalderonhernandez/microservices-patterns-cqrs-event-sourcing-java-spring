@@ -8,6 +8,8 @@ import com.viking_bank.account.query.domain.AccountRepository;
 import com.viking_bank.account.query.domain.BankAccount;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
+
 @Service
 public class BikingBankAccountService implements AccountService {
     private final AccountRepository accountRepository;
@@ -24,7 +26,7 @@ public class BikingBankAccountService implements AccountService {
                 .accountHolder(accountEvent.getAccountHolder())
                 .accountType(accountEvent.getAccountType())
                 .balance(accountEvent.getOpeningBalance())
-                .creationTime(accountEvent.getCurrentDate())
+                .creationTime(LocalDateTime.now())
                 .build();
 
         accountRepository.save(bankAccount);

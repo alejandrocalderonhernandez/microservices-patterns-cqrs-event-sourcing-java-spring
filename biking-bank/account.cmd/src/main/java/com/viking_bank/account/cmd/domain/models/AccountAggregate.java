@@ -1,4 +1,4 @@
-package com.viking_bank.account.cmd.domain;
+package com.viking_bank.account.cmd.domain.models;
 
 import com.viking_bank.account.cmd.api.command.OpenAccountCommand;
 import com.viking_bank.account.common.events.AccountClosedEvent;
@@ -9,6 +9,9 @@ import com.viking_bank.cqrs.core.domain.AggregateRoot;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+/*
+ * The apply methods called by reflection
+ */
 @NoArgsConstructor
 public class AccountAggregate extends AggregateRoot {
 
@@ -92,12 +95,12 @@ public class AccountAggregate extends AggregateRoot {
 
     public void apply(FoundsWithdrawnEvent event) {
         this.id = event.getId();
-        this.balance += event.getAmount();
+        this.balance -= event.getAmount();
     }
 
     public void apply(FoundDepositedEvent event) {
         this.id = event.getId();
-        this.balance -= event.getAmount();
+        this.balance += event.getAmount();
     }
 
     public void apply(AccountClosedEvent event) {

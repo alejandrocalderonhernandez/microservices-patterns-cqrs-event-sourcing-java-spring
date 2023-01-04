@@ -1,6 +1,6 @@
-package com.viking_bank.account.cmd.infraestructure;
+package com.viking_bank.account.cmd.infraestructure.handlers;
 
-import com.viking_bank.account.cmd.domain.AccountAggregate;
+import com.viking_bank.account.cmd.domain.models.AccountAggregate;
 import com.viking_bank.cqrs.core.domain.AggregateRoot;
 import com.viking_bank.cqrs.core.events.BaseEvent;
 import com.viking_bank.cqrs.core.handlers.EventSourcingHandler;
