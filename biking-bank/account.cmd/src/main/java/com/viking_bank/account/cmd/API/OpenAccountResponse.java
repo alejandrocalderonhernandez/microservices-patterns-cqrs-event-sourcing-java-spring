@@ -1,6 +1,6 @@
-package com.viking_bank.account.common.events;
+package com.viking_bank.account.cmd.API;
 
-import com.viking_bank.cqrs.core.infrastructure.events.BaseEvent;
+import com.viking_bank.account.common.dto.BaseResponse;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -10,9 +10,8 @@ import lombok.experimental.SuperBuilder;
 @EqualsAndHashCode(callSuper = true)
 @Data
 @SuperBuilder
-@NoArgsConstructor
 @AllArgsConstructor
-public class FoundDepositedEvent extends BaseEvent {
-
-    private Double amount;
+@NoArgsConstructor
+public class OpenAccountResponse extends BaseResponse {
+    private String id;
 }

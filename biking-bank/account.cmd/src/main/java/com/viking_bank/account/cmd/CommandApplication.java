@@ -1,7 +1,8 @@
 package com.viking_bank.account.cmd;
 
-import com.viking_bank.account.cmd.api.command.*;
-import com.viking_bank.cqrs.core.infrastructure.CommandDispatcher;
+import com.viking_bank.account.cmd.API.commands.*;
+import com.viking_bank.account.cmd.API.commands.handlers.CommandHandler;
+import com.viking_bank.cqrs.core.infrastructure.dispatchers.CommandDispatcher;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

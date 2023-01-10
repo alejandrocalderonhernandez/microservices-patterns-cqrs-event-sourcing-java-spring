@@ -1,0 +1,15 @@
+package com.viking_bank.cqrs.core.infrastructure.events.messages;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@SuperBuilder
+public abstract class Messages {
+
+    private String id;
+}

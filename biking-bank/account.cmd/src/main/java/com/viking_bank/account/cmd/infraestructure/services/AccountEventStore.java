@@ -1,12 +1,12 @@
 package com.viking_bank.account.cmd.infraestructure.services;
 
 import com.google.common.collect.Iterables;
-import com.viking_bank.account.cmd.domain.models.AccountAggregate;
+import com.viking_bank.account.cmd.domain.aggregates.AccountAggregate;
 import com.viking_bank.account.cmd.domain.repositories.EventStoreRepository;
-import com.viking_bank.cqrs.core.events.BaseEvent;
-import com.viking_bank.cqrs.core.events.EventModel;
-import com.viking_bank.cqrs.core.infrastructure.EventStoreService;
-import com.viking_bank.cqrs.core.producers.EventProducer;
+import com.viking_bank.cqrs.core.infrastructure.events.BaseEvent;
+import com.viking_bank.cqrs.core.infrastructure.events.EventModel;
+import com.viking_bank.cqrs.core.infrastructure.services.EventStoreService;
+import com.viking_bank.cqrs.core.infrastructure.events.producers.EventProducer;
 import com.viking_bank.cqrs.core.util.IllegalEventVersionException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

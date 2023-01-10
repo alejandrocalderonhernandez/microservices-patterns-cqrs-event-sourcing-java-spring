@@ -1,6 +1,6 @@
-package com.viking_bank.account.common.events;
+package com.viking_bank.cqrs.core.infrastructure.events;
 
-import com.viking_bank.cqrs.core.infrastructure.events.BaseEvent;
+import com.viking_bank.cqrs.core.infrastructure.events.messages.Messages;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -9,10 +9,10 @@ import lombok.experimental.SuperBuilder;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
-@SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
-public class FoundDepositedEvent extends BaseEvent {
+@SuperBuilder
+public abstract class BaseEvent extends Messages {
 
-    private Double amount;
+    private Integer version;
 }

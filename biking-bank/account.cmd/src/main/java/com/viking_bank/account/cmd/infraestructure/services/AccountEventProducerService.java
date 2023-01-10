@@ -1,7 +1,7 @@
 package com.viking_bank.account.cmd.infraestructure.services;
 
-import com.viking_bank.cqrs.core.events.BaseEvent;
-import com.viking_bank.cqrs.core.producers.EventProducer;
+import com.viking_bank.cqrs.core.infrastructure.events.BaseEvent;
+import com.viking_bank.cqrs.core.infrastructure.events.producers.EventProducer;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.kafka.KafkaException;
 import org.springframework.kafka.core.KafkaTemplate;

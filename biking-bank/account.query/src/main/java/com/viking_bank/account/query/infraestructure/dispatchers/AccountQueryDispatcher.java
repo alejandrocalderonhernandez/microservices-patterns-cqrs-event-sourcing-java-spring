@@ -1,9 +1,9 @@
 package com.viking_bank.account.query.infraestructure.dispatchers;
 
-import com.viking_bank.cqrs.core.domain.BaseEntity;
-import com.viking_bank.cqrs.core.domain.BaseQueryRequest;
-import com.viking_bank.cqrs.core.infrastructure.QueryDispatcher;
-import com.viking_bank.cqrs.core.infrastructure.QueryHandlerMethod;
+import com.viking_bank.cqrs.core.domain.entities.BaseEntity;
+import com.viking_bank.cqrs.core.api.models.requests.BaseQueryRequest;
+import com.viking_bank.cqrs.core.infrastructure.dispatchers.QueryDispatcher;
+import com.viking_bank.cqrs.core.infrastructure.handlers.QueryHandlerMethod;
 import org.springframework.stereotype.Service;
 
 import java.util.*;

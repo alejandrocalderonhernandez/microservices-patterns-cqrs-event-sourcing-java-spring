@@ -1,6 +1,6 @@
 package com.viking_bank.account.cmd.domain.repositories;
 
-import com.viking_bank.cqrs.core.events.EventModel;
+import com.viking_bank.cqrs.core.infrastructure.events.EventModel;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.HashSet;
