@@ -1,4 +1,4 @@
-package com.viking_bank.cqrs.core.api.models.requests;
+package com.viking_bank.cqrs.core.API.models.requests;
 
 import com.viking_bank.cqrs.core.domain.entities.EqualityType;
 import lombok.AllArgsConstructor;

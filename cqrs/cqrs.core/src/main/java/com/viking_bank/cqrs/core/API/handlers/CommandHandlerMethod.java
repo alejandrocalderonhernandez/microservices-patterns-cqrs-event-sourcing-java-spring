@@ -1,6 +1,6 @@
-package com.viking_bank.cqrs.core.api.handlers;
+package com.viking_bank.cqrs.core.API.handlers;
 
-import com.viking_bank.cqrs.core.api.comands.BaseCommand;
+import com.viking_bank.cqrs.core.API.comands.BaseCommand;
 
 /**
  * This interface represents a "abstract Colleague" in design patter mediator

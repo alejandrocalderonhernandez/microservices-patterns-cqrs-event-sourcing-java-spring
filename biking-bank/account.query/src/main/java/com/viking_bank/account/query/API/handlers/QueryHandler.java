@@ -1,9 +1,9 @@
-package com.viking_bank.account.query.api.handlers;
+package com.viking_bank.account.query.API.handlers;
 
-import com.viking_bank.cqrs.core.api.models.requests.FindAccountByHolderQueryRequest;
-import com.viking_bank.cqrs.core.api.models.requests.FindAccountByIdQueryRequest;
-import com.viking_bank.cqrs.core.api.models.requests.FindAccountWithBalanceQueryRequest;
-import com.viking_bank.cqrs.core.api.models.requests.FindAllAccountsQueryRequest;
+import com.viking_bank.cqrs.core.API.models.requests.FindAccountByHolderQueryRequest;
+import com.viking_bank.cqrs.core.API.models.requests.FindAccountByIdQueryRequest;
+import com.viking_bank.cqrs.core.API.models.requests.FindAccountWithBalanceQueryRequest;
+import com.viking_bank.cqrs.core.API.models.requests.FindAllAccountsQueryRequest;
 import com.viking_bank.cqrs.core.domain.entities.BaseEntity;
 
 import java.util.List;

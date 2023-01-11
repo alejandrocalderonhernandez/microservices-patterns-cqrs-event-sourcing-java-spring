@@ -1,7 +1,7 @@
 package com.viking_bank.account.cmd.infraestructure.dispatchers;
 
-import com.viking_bank.cqrs.core.api.comands.BaseCommand;
-import com.viking_bank.cqrs.core.api.handlers.CommandHandlerMethod;
+import com.viking_bank.cqrs.core.API.comands.BaseCommand;
+import com.viking_bank.cqrs.core.API.handlers.CommandHandlerMethod;
 import com.viking_bank.cqrs.core.infrastructure.dispatchers.CommandDispatcher;
 import org.springframework.stereotype.Service;
 

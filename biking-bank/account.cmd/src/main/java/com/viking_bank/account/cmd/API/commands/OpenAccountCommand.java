@@ -1,7 +1,7 @@
 package com.viking_bank.account.cmd.API.commands;
 
 import com.viking_bank.account.common.dto.AccountType;
-import com.viking_bank.cqrs.core.api.comands.BaseCommand;
+import com.viking_bank.cqrs.core.API.comands.BaseCommand;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 

@@ -1,10 +1,10 @@
 package com.viking_bank.account.query;
 
-import com.viking_bank.account.query.api.handlers.QueryHandler;
-import com.viking_bank.cqrs.core.api.models.requests.FindAccountByHolderQueryRequest;
-import com.viking_bank.cqrs.core.api.models.requests.FindAccountByIdQueryRequest;
-import com.viking_bank.cqrs.core.api.models.requests.FindAccountWithBalanceQueryRequest;
-import com.viking_bank.cqrs.core.api.models.requests.FindAllAccountsQueryRequest;
+import com.viking_bank.account.query.API.handlers.QueryHandler;
+import com.viking_bank.cqrs.core.API.models.requests.FindAccountByHolderQueryRequest;
+import com.viking_bank.cqrs.core.API.models.requests.FindAccountByIdQueryRequest;
+import com.viking_bank.cqrs.core.API.models.requests.FindAccountWithBalanceQueryRequest;
+import com.viking_bank.cqrs.core.API.models.requests.FindAllAccountsQueryRequest;
 import com.viking_bank.cqrs.core.infrastructure.dispatchers.QueryDispatcher;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;

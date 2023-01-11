@@ -1,4 +1,4 @@
-package com.viking_bank.cqrs.core.api.comands;
+package com.viking_bank.cqrs.core.API.comands;
 
 import com.viking_bank.cqrs.core.infrastructure.events.messages.Messages;
 import lombok.NoArgsConstructor;

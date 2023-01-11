@@ -1,12 +1,11 @@
-package com.viking_bank.account.query.api.handlers;
+package com.viking_bank.account.query.API.handlers;
 
-import com.viking_bank.account.common.utils.CommonUtil;
 import com.viking_bank.account.query.domain.AccountRepository;
 import com.viking_bank.account.query.domain.BankAccount;
-import com.viking_bank.cqrs.core.api.models.requests.FindAccountByHolderQueryRequest;
-import com.viking_bank.cqrs.core.api.models.requests.FindAccountByIdQueryRequest;
-import com.viking_bank.cqrs.core.api.models.requests.FindAccountWithBalanceQueryRequest;
-import com.viking_bank.cqrs.core.api.models.requests.FindAllAccountsQueryRequest;
+import com.viking_bank.cqrs.core.API.models.requests.FindAccountByHolderQueryRequest;
+import com.viking_bank.cqrs.core.API.models.requests.FindAccountByIdQueryRequest;
+import com.viking_bank.cqrs.core.API.models.requests.FindAccountWithBalanceQueryRequest;
+import com.viking_bank.cqrs.core.API.models.requests.FindAllAccountsQueryRequest;
 import com.viking_bank.cqrs.core.domain.entities.BaseEntity;
 import org.springframework.stereotype.Service;
 
@@ -25,7 +24,7 @@ public class AccountQueryHandler implements QueryHandler {
     @Override
     public List<BaseEntity> handle(FindAllAccountsQueryRequest query) {
         final var accounts = this.accountRepository.findAll();
-        List<BaseEntity> result = Collections.emptyList();
+        List<BaseEntity> result = new ArrayList<>();
         accounts.forEach(result::add);
         return result;
     }

@@ -1,7 +1,7 @@
 package com.viking_bank.account.query.infraestructure.dispatchers;
 
 import com.viking_bank.cqrs.core.domain.entities.BaseEntity;
-import com.viking_bank.cqrs.core.api.models.requests.BaseQueryRequest;
+import com.viking_bank.cqrs.core.API.models.requests.BaseQueryRequest;
 import com.viking_bank.cqrs.core.infrastructure.dispatchers.QueryDispatcher;
 import com.viking_bank.cqrs.core.infrastructure.handlers.QueryHandlerMethod;
 import org.springframework.stereotype.Service;
@@ -20,7 +20,7 @@ public class AccountQueryDispatcher implements QueryDispatcher {
     }
 
     @Override
-    public List<BaseEntity> registerHandler(BaseQueryRequest query) {
+    public List<BaseEntity> send(BaseQueryRequest query) {
         var handlersOptional = Optional.of(routes.get(query.getClass()));
 
         var handler = handlersOptional.orElseThrow(() -> new RuntimeException("no query was registered"));

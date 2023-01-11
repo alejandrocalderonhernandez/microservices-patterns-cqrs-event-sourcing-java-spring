@@ -1,4 +1,4 @@
-package com.viking_bank.cqrs.core.api.models.requests;
+package com.viking_bank.cqrs.core.API.models.requests;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

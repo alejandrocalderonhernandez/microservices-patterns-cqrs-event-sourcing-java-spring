@@ -1,7 +1,7 @@
 package com.viking_bank.cqrs.core.infrastructure.handlers;
 
 import com.viking_bank.cqrs.core.domain.entities.BaseEntity;
-import com.viking_bank.cqrs.core.api.models.requests.BaseQueryRequest;
+import com.viking_bank.cqrs.core.API.models.requests.BaseQueryRequest;
 
 import java.util.List;
 

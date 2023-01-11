@@ -1,3 +1,3 @@
-package com.viking_bank.cqrs.core.api.models.requests;
+package com.viking_bank.cqrs.core.API.models.requests;
 
 public class FindAllAccountsQueryRequest extends BaseQueryRequest { }
